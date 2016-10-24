@@ -17,7 +17,7 @@
 		},
 
 		ajaxDone: function(){
-
+			
 		},
 
 		ajaxFail: function(){

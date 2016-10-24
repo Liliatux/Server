@@ -29,6 +29,24 @@
 					$("#divPassword").html("Le mot de passe de l'IOT est :" + allPlaces[i].password);
 				}
 			}
+		},
+		ajaxFail: function(places){
+			alert("erreur");
+		},
+		ajaxAlways: function(places){
+			alert("complete");
+		},
+
+		meteo: function(){
+			var temps = 'http://openweathermap.org/';
+			$.ajax(temps)
+				
+				
+
+
+
+
+
 		}
 	}
 

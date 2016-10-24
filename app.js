@@ -13,7 +13,7 @@
         },
 
         start: function() {
-            var url = "http://192.168.1.21:3000/places";
+            var urlPlace = "http://192.168.1.21:3000/places";
             $.ajax(url)
                 .done(this.ajaxDone)
                 .fail(this.ajaxFail)
@@ -31,33 +31,16 @@
                 }
             }
         },
+
         ajaxFail:function(places){
             console.log("erreur");
         },
+
         ajaxAlways:function(places){
             console.log("complete");
-        },
+        }
 
-        meteo:function(){
-    location: 'Austin, TX',
-    woeid: '',
-    unit: 'f',
-
-    success: function(weather) {
-      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
-  
-      $("#weather").html(html);
-    },
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
-    },
-  });
-
-        };
-    }
+    }  
 
     app.init();
 
